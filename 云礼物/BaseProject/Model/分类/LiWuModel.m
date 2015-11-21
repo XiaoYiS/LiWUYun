@@ -10,4 +10,27 @@
 
 @implementation LiWuModel
 
+
++ (NSDictionary *)objectClassInArray{
+    return @{@"inf" : [LiWuInfModel class], @"category_list" : [LiWuCategoryListMode class]};
+}
 @end
+@implementation LiWuInfModel
++ (NSDictionary *)replacedKeyFromPropertyName{
+    return @{@"ID":@"id"};
+}
+@end
+
+
+@implementation LiWuCategoryListMode
+
+
++ (NSDictionary *)replacedKeyFromPropertyName{
+    return @{@"ID":@"id"};
+}
++ (NSString *)replacedKeyFromPropertyName121:(NSString *)propertyName{
+    return [propertyName underlineFromCamel];
+}
+@end
+
+

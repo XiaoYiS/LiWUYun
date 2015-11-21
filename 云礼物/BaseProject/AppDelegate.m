@@ -13,7 +13,7 @@
 #import "LWSMenuViewController.h"
 #import "LWSContentViewController.h"
 
-#import "GLNetManager.h"
+
 
 @interface AppDelegate ()
 
@@ -26,7 +26,6 @@
     [self initializeWithApplication:application];
 
     
-   
     
     //需要在target中info-Bundle identifier--添加最后一个属性来实现
 //    application.statusBarStyle = UIStatusBarStyleLightContent;

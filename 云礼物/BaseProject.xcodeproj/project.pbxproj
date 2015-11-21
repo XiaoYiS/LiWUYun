@@ -92,6 +92,9 @@
 		E4C1E9DF1BFFF36B00456BA2 /* GLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1E9961BFFF36A00456BA2 /* GLViewModel.m */; };
 		E4C1E9E01BFFF36B00456BA2 /* ListDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1E9981BFFF36A00456BA2 /* ListDetailViewModel.m */; };
 		E4C1EA0B1C000E3600456BA2 /* LiWuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1EA0A1C000E3600456BA2 /* LiWuModel.m */; };
+		E4C1EA0E1C000FA800456BA2 /* LiWuNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1EA0D1C000FA800456BA2 /* LiWuNetManager.m */; };
+		E4C1EA111C00111900456BA2 /* LiWuViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1EA101C00111900456BA2 /* LiWuViewModel.m */; };
+		E4C1EA141C00149500456BA2 /* LiWuCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1EA131C00149500456BA2 /* LiWuCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -240,10 +243,10 @@
 		E4C1E9821BFFF36A00456BA2 /* LWViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWViewController.m; sourceTree = "<group>"; };
 		E4C1E9861BFFF36A00456BA2 /* BaseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewModel.h; sourceTree = "<group>"; };
 		E4C1E9871BFFF36A00456BA2 /* BaseViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewModel.m; sourceTree = "<group>"; };
-		E4C1E9881BFFF36A00456BA2 /* ReMenViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReMenViewModel.h; sourceTree = "<group>"; };
-		E4C1E9891BFFF36A00456BA2 /* ReMenViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReMenViewModel.m; sourceTree = "<group>"; };
-		E4C1E98A1BFFF36A00456BA2 /* ShouYeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouYeViewModel.h; sourceTree = "<group>"; };
-		E4C1E98B1BFFF36A00456BA2 /* ShouYeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYeViewModel.m; sourceTree = "<group>"; };
+		E4C1E9881BFFF36A00456BA2 /* ReMenViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReMenViewModel.h; path = ../ReMenViewModel.h; sourceTree = "<group>"; };
+		E4C1E9891BFFF36A00456BA2 /* ReMenViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReMenViewModel.m; path = ../ReMenViewModel.m; sourceTree = "<group>"; };
+		E4C1E98A1BFFF36A00456BA2 /* ShouYeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouYeViewModel.h; path = ../ShouYeViewModel.h; sourceTree = "<group>"; };
+		E4C1E98B1BFFF36A00456BA2 /* ShouYeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShouYeViewModel.m; path = ../ShouYeViewModel.m; sourceTree = "<group>"; };
 		E4C1E98D1BFFF36A00456BA2 /* CategoryDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailViewModel.h; sourceTree = "<group>"; };
 		E4C1E98E1BFFF36A00456BA2 /* CategoryDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailViewModel.m; sourceTree = "<group>"; };
 		E4C1E98F1BFFF36A00456BA2 /* GLCHViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLCHViewModel.h; sourceTree = "<group>"; };
@@ -259,6 +262,12 @@
 		E4C1EA081C0001A500456BA2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E4C1EA091C000E3600456BA2 /* LiWuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiWuModel.h; sourceTree = "<group>"; };
 		E4C1EA0A1C000E3600456BA2 /* LiWuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiWuModel.m; sourceTree = "<group>"; };
+		E4C1EA0C1C000FA800456BA2 /* LiWuNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiWuNetManager.h; sourceTree = "<group>"; };
+		E4C1EA0D1C000FA800456BA2 /* LiWuNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiWuNetManager.m; sourceTree = "<group>"; };
+		E4C1EA0F1C00111900456BA2 /* LiWuViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiWuViewModel.h; sourceTree = "<group>"; };
+		E4C1EA101C00111900456BA2 /* LiWuViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiWuViewModel.m; sourceTree = "<group>"; };
+		E4C1EA121C00149500456BA2 /* LiWuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiWuCell.h; sourceTree = "<group>"; };
+		E4C1EA131C00149500456BA2 /* LiWuCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiWuCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -427,6 +436,8 @@
 				E4C1E9021BFFF36A00456BA2 /* GLRequestPath.h */,
 				E4C1E9031BFFF36A00456BA2 /* ListDetailNetManager.h */,
 				E4C1E9041BFFF36A00456BA2 /* ListDetailNetManager.m */,
+				E4C1EA0C1C000FA800456BA2 /* LiWuNetManager.h */,
+				E4C1EA0D1C000FA800456BA2 /* LiWuNetManager.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -604,6 +615,8 @@
 				E4C1E9351BFFF36A00456BA2 /* ShouYeCell.m */,
 				E4C1E9361BFFF36A00456BA2 /* ZRImageView.h */,
 				E4C1E9371BFFF36A00456BA2 /* ZRImageView.m */,
+				E4C1EA121C00149500456BA2 /* LiWuCell.h */,
+				E4C1EA131C00149500456BA2 /* LiWuCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -766,10 +779,6 @@
 			children = (
 				E4C1E9861BFFF36A00456BA2 /* BaseViewModel.h */,
 				E4C1E9871BFFF36A00456BA2 /* BaseViewModel.m */,
-				E4C1E9881BFFF36A00456BA2 /* ReMenViewModel.h */,
-				E4C1E9891BFFF36A00456BA2 /* ReMenViewModel.m */,
-				E4C1E98A1BFFF36A00456BA2 /* ShouYeViewModel.h */,
-				E4C1E98B1BFFF36A00456BA2 /* ShouYeViewModel.m */,
 				E4C1E98C1BFFF36A00456BA2 /* 分类 */,
 				E4C1E9991BFFF36A00456BA2 /* 热门 */,
 				E4C1E99A1BFFF36B00456BA2 /* 首页 */,
@@ -792,6 +801,8 @@
 				E4C1E9941BFFF36A00456BA2 /* GLFGViewModel.m */,
 				E4C1E9951BFFF36A00456BA2 /* GLViewModel.h */,
 				E4C1E9961BFFF36A00456BA2 /* GLViewModel.m */,
+				E4C1EA0F1C00111900456BA2 /* LiWuViewModel.h */,
+				E4C1EA101C00111900456BA2 /* LiWuViewModel.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -799,6 +810,8 @@
 		E4C1E9991BFFF36A00456BA2 /* 热门 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E9881BFFF36A00456BA2 /* ReMenViewModel.h */,
+				E4C1E9891BFFF36A00456BA2 /* ReMenViewModel.m */,
 			);
 			path = "热门";
 			sourceTree = "<group>";
@@ -806,6 +819,8 @@
 		E4C1E99A1BFFF36B00456BA2 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E98A1BFFF36A00456BA2 /* ShouYeViewModel.h */,
+				E4C1E98B1BFFF36A00456BA2 /* ShouYeViewModel.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -983,6 +998,7 @@
 				E4C1E99F1BFFF36B00456BA2 /* CategoryListModel.m in Sources */,
 				E4C1E9B01BFFF36B00456BA2 /* WMMenuView.m in Sources */,
 				E4C1E9C41BFFF36B00456BA2 /* ZTListDetailViewController.m in Sources */,
+				E4C1EA0E1C000FA800456BA2 /* LiWuNetManager.m in Sources */,
 				E4C1E9DD1BFFF36B00456BA2 /* GLDXViewModel.m in Sources */,
 				E4C1E9A81BFFF36B00456BA2 /* AppDelegate+Category.m in Sources */,
 				E4C1E9B21BFFF36B00456BA2 /* WMPageController.m in Sources */,
@@ -993,6 +1009,7 @@
 				E4C1E9A91BFFF36B00456BA2 /* FactoryAdd.m in Sources */,
 				E4C1E9B41BFFF36B00456BA2 /* ReMenCell.m in Sources */,
 				E4C1E9B61BFFF36B00456BA2 /* ZRImageView.m in Sources */,
+				E4C1EA141C00149500456BA2 /* LiWuCell.m in Sources */,
 				3886C0981BD748830014E661 /* main.m in Sources */,
 				E4C1E9BF1BFFF36B00456BA2 /* WelcomeViewController.m in Sources */,
 				E4C1E9AB1BFFF36B00456BA2 /* NSObject+Common.m in Sources */,
@@ -1013,6 +1030,7 @@
 				E4C1E9E01BFFF36B00456BA2 /* ListDetailViewModel.m in Sources */,
 				E4C1E99E1BFFF36B00456BA2 /* ShouYeModel.m in Sources */,
 				E4C1E9A01BFFF36B00456BA2 /* GLModel.m in Sources */,
+				E4C1EA111C00111900456BA2 /* LiWuViewModel.m in Sources */,
 				E4C1EA0B1C000E3600456BA2 /* LiWuModel.m in Sources */,
 				E4C1E9D51BFFF36B00456BA2 /* FGDetailViewController.m in Sources */,
 				E4C1E9D41BFFF36B00456BA2 /* FGContrsintViewController.m in Sources */,
