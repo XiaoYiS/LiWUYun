@@ -13,5 +13,7 @@
 @property (strong,nonatomic) ZRImageView *iconIV;
 @property (strong,nonatomic) UILabel *titleLb;
 
+@property (strong,nonatomic) UILabel *likesCount;
+
 
 @end

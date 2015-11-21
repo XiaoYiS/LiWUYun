@@ -37,7 +37,9 @@
 //    NSLog(@"--=id-ID====-- %ld",[self itemsgForRow:row].id);
     return [self itemsgForRow:row].id;
 }
-
+- (NSString *)likesCountForRow:(NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",[self itemsgForRow:row].likesCount];
+}
 - (void)getMoreDataCompletionHandle:(CompletionHandle)completionHandle{
     self.index += 20;
     [self getDataFromNetCompleteHandle:completionHandle];

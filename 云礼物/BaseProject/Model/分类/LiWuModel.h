@@ -1,0 +1,13 @@
+//
+//  LiWuModel.h
+//  BaseProject
+//
+//  Created by apple-jd12 on 15/11/21.
+//  Copyright © 2015年 Tarena. All rights reserved.
+//
+
+#import "BaseModel.h"
+
+@interface LiWuModel : BaseModel
+
+@end

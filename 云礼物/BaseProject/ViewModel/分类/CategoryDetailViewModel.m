@@ -51,8 +51,8 @@
 - (NSInteger )IDForRow:(NSInteger)row{
     return [self modelForRow:row].id;
 }
-- (NSInteger)likesCountForRow:(NSInteger)row{
-    return [self modelForRow:row].likesCount;
+- (NSString *)likesCountForRow:(NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",[self modelForRow:row].likesCount];
 }
 - (NSURL *)URLForRow:(NSInteger)row{
     return [NSURL URLWithString:[self modelForRow:row].url];

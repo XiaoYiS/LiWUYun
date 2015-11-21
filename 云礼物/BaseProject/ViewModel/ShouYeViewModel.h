@@ -25,7 +25,7 @@
 - (NSString *)titlegForRow:(NSInteger)row;
 - (NSInteger)likeCountgForRow:(NSInteger)row;
 - (NSInteger)IDForRow:(NSInteger)row;
-
+- (NSString *)likesCountForRow:(NSInteger)row;
 //
 - (id)initWithShouYeListType:(ShouYeListType)type;
 @property (assign,nonatomic) ShouYeListType type;

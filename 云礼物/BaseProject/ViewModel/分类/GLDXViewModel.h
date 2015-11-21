@@ -17,4 +17,5 @@
 - (NSString *)titleForRow:(NSInteger)row;
 - (NSURL *)URLForRow:(NSInteger)row;
 - (NSString *)urlForRow:(NSInteger)row;
+- (NSString *)likesCountForRow:(NSInteger)row;
 @end

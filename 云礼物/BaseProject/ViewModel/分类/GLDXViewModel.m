@@ -18,6 +18,9 @@
 - (NSInteger)rowNumber{
     return self.dataArr.count;
 }
+- (NSString *)likesCountForRow:(NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",[self modelForRow:row].likesCount];
+}
 - (GLDataItemsModel *)modelForRow:(NSInteger)row{
     return self.dataArr[row];
 }

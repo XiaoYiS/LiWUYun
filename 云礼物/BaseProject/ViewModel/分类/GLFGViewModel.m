@@ -52,5 +52,7 @@
 - (NSString *)urlForRow:(NSInteger)row{
     return [self modelForRow:row].url;
 }
-
+- (NSString *)likesCountForRow:(NSInteger)row{
+    return [NSString stringWithFormat:@"%ld",[self modelForRow:row].likesCount];
+}
 @end

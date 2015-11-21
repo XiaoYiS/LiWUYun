@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Category.h"
-
+#import "NSString+Icons.h"
 #import "WelcomeViewController.h"
 #import "LWSMenuViewController.h"
 #import "LWSContentViewController.h"

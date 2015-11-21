@@ -26,6 +26,8 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    self.tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     [self.tableView registerClass:[ShouYeCell class] forCellReuseIdentifier:@"Cell"];
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.shouYeVM refreshDataCompletionHandle:^(NSError *error) {
@@ -65,12 +67,12 @@
     
     [cell.iconIV.imageView setImageWithURL:[self.shouYeVM coverImgForRow:indexPath.row] placeholderImage:[UIImage imageNamed:@"gif_introduce"]];
     cell.titleLb.text = [self.shouYeVM titlegForRow:indexPath.row];
-    
+    cell.likesCount.text = [self.shouYeVM likesCountForRow:indexPath.row];
     return cell;
 }
-
+kRemoveCellSeparator
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    return 265;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -91,6 +91,7 @@
 		E4C1E9DE1BFFF36B00456BA2 /* GLFGViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1E9941BFFF36A00456BA2 /* GLFGViewModel.m */; };
 		E4C1E9DF1BFFF36B00456BA2 /* GLViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1E9961BFFF36A00456BA2 /* GLViewModel.m */; };
 		E4C1E9E01BFFF36B00456BA2 /* ListDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1E9981BFFF36A00456BA2 /* ListDetailViewModel.m */; };
+		E4C1EA0B1C000E3600456BA2 /* LiWuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E4C1EA0A1C000E3600456BA2 /* LiWuModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,7 +111,6 @@
 		3886C0A21BD748830014E661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		3886C0A71BD748830014E661 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3886C0AD1BD749A00014E661 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = ../LaunchScreen.xib; sourceTree = "<group>"; };
-		3886C0B81BD74A700014E661 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		4329DABFE5AD654FE71597C9 /* Pods-BaseProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.debug.xcconfig"; sourceTree = "<group>"; };
 		5EAAD623A23724C816F8DC02 /* libPods-BaseProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BaseProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,7 +142,6 @@
 		E4C1E9021BFFF36A00456BA2 /* GLRequestPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLRequestPath.h; sourceTree = "<group>"; };
 		E4C1E9031BFFF36A00456BA2 /* ListDetailNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailNetManager.h; sourceTree = "<group>"; };
 		E4C1E9041BFFF36A00456BA2 /* ListDetailNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailNetManager.m; sourceTree = "<group>"; };
-		E4C1E9081BFFF36A00456BA2 /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E4C1E90B1BFFF36A00456BA2 /* AppDelegate+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+Category.h"; sourceTree = "<group>"; };
 		E4C1E90C1BFFF36A00456BA2 /* AppDelegate+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+Category.m"; sourceTree = "<group>"; };
 		E4C1E90D1BFFF36A00456BA2 /* FactoryAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FactoryAdd.h; sourceTree = "<group>"; };
@@ -173,22 +172,22 @@
 		E4C1E9351BFFF36A00456BA2 /* ShouYeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYeCell.m; sourceTree = "<group>"; };
 		E4C1E9361BFFF36A00456BA2 /* ZRImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZRImageView.h; sourceTree = "<group>"; };
 		E4C1E9371BFFF36A00456BA2 /* ZRImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZRImageView.m; sourceTree = "<group>"; };
-		E4C1E9391BFFF36A00456BA2 /* LWSContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSContentViewController.h; sourceTree = "<group>"; };
-		E4C1E93A1BFFF36A00456BA2 /* LWSContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSContentViewController.m; sourceTree = "<group>"; };
+		E4C1E9391BFFF36A00456BA2 /* LWSContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LWSContentViewController.h; path = ../LWSContentViewController.h; sourceTree = "<group>"; };
+		E4C1E93A1BFFF36A00456BA2 /* LWSContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LWSContentViewController.m; path = ../LWSContentViewController.m; sourceTree = "<group>"; };
 		E4C1E93B1BFFF36A00456BA2 /* LWSMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LWSMenuViewController.h; sourceTree = "<group>"; };
 		E4C1E93C1BFFF36A00456BA2 /* LWSMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LWSMenuViewController.m; sourceTree = "<group>"; };
-		E4C1E93D1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReMenDetaiHTMLViewController.h; sourceTree = "<group>"; };
-		E4C1E93E1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReMenDetaiHTMLViewController.m; sourceTree = "<group>"; };
-		E4C1E93F1BFFF36A00456BA2 /* ReMenDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReMenDetailViewController.h; sourceTree = "<group>"; };
-		E4C1E9401BFFF36A00456BA2 /* ReMenDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReMenDetailViewController.m; sourceTree = "<group>"; };
-		E4C1E9411BFFF36A00456BA2 /* ReMenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReMenViewController.h; sourceTree = "<group>"; };
-		E4C1E9421BFFF36A00456BA2 /* ReMenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReMenViewController.m; sourceTree = "<group>"; };
-		E4C1E9431BFFF36A00456BA2 /* ShouYeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouYeDetailViewController.h; sourceTree = "<group>"; };
-		E4C1E9441BFFF36A00456BA2 /* ShouYeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYeDetailViewController.m; sourceTree = "<group>"; };
-		E4C1E9451BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouYeDetalHtmlViewController.h; sourceTree = "<group>"; };
-		E4C1E9461BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYeDetalHtmlViewController.m; sourceTree = "<group>"; };
-		E4C1E9471BFFF36A00456BA2 /* ShouYeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouYeTableViewController.h; sourceTree = "<group>"; };
-		E4C1E9481BFFF36A00456BA2 /* ShouYeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYeTableViewController.m; sourceTree = "<group>"; };
+		E4C1E93D1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReMenDetaiHTMLViewController.h; path = ../ReMenDetaiHTMLViewController.h; sourceTree = "<group>"; };
+		E4C1E93E1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReMenDetaiHTMLViewController.m; path = ../ReMenDetaiHTMLViewController.m; sourceTree = "<group>"; };
+		E4C1E93F1BFFF36A00456BA2 /* ReMenDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReMenDetailViewController.h; path = ../ReMenDetailViewController.h; sourceTree = "<group>"; };
+		E4C1E9401BFFF36A00456BA2 /* ReMenDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReMenDetailViewController.m; path = ../ReMenDetailViewController.m; sourceTree = "<group>"; };
+		E4C1E9411BFFF36A00456BA2 /* ReMenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ReMenViewController.h; path = ../ReMenViewController.h; sourceTree = "<group>"; };
+		E4C1E9421BFFF36A00456BA2 /* ReMenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ReMenViewController.m; path = ../ReMenViewController.m; sourceTree = "<group>"; };
+		E4C1E9431BFFF36A00456BA2 /* ShouYeDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouYeDetailViewController.h; path = ../ShouYeDetailViewController.h; sourceTree = "<group>"; };
+		E4C1E9441BFFF36A00456BA2 /* ShouYeDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShouYeDetailViewController.m; path = ../ShouYeDetailViewController.m; sourceTree = "<group>"; };
+		E4C1E9451BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouYeDetalHtmlViewController.h; path = ../ShouYeDetalHtmlViewController.h; sourceTree = "<group>"; };
+		E4C1E9461BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShouYeDetalHtmlViewController.m; path = ../ShouYeDetalHtmlViewController.m; sourceTree = "<group>"; };
+		E4C1E9471BFFF36A00456BA2 /* ShouYeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouYeTableViewController.h; path = ../ShouYeTableViewController.h; sourceTree = "<group>"; };
+		E4C1E9481BFFF36A00456BA2 /* ShouYeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShouYeTableViewController.m; path = ../ShouYeTableViewController.m; sourceTree = "<group>"; };
 		E4C1E9491BFFF36A00456BA2 /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		E4C1E94A1BFFF36A00456BA2 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		E4C1E94C1BFFF36A00456BA2 /* CategoriesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoriesViewController.h; sourceTree = "<group>"; };
@@ -257,6 +256,9 @@
 		E4C1E9961BFFF36A00456BA2 /* GLViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GLViewModel.m; sourceTree = "<group>"; };
 		E4C1E9971BFFF36A00456BA2 /* ListDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListDetailViewModel.h; sourceTree = "<group>"; };
 		E4C1E9981BFFF36A00456BA2 /* ListDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailViewModel.m; sourceTree = "<group>"; };
+		E4C1EA081C0001A500456BA2 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E4C1EA091C000E3600456BA2 /* LiWuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LiWuModel.h; sourceTree = "<group>"; };
+		E4C1EA0A1C000E3600456BA2 /* LiWuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LiWuModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -306,7 +308,6 @@
 				E4C1E8E41BFFF36A00456BA2 /* Define */,
 				E4C1E8E61BFFF36A00456BA2 /* Model */,
 				E4C1E8F61BFFF36A00456BA2 /* NetManager */,
-				E4C1E9071BFFF36A00456BA2 /* Resource */,
 				E4C1E9091BFFF36A00456BA2 /* Util */,
 				E4C1E9161BFFF36A00456BA2 /* Vendor */,
 				E4C1E92F1BFFF36A00456BA2 /* View */,
@@ -333,7 +334,7 @@
 				3886C0A21BD748830014E661 /* Assets.xcassets */,
 				3886C0AD1BD749A00014E661 /* LaunchScreen.xib */,
 				3886C09F1BD748830014E661 /* Main.storyboard */,
-				3886C0B81BD74A700014E661 /* PrefixHeader.pch */,
+				E4C1EA081C0001A500456BA2 /* PrefixHeader.pch */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -380,6 +381,8 @@
 				E4C1E8F11BFFF36A00456BA2 /* GLModel.m */,
 				E4C1E8F21BFFF36A00456BA2 /* ListDetailModel.h */,
 				E4C1E8F31BFFF36A00456BA2 /* ListDetailModel.m */,
+				E4C1EA091C000E3600456BA2 /* LiWuModel.h */,
+				E4C1EA0A1C000E3600456BA2 /* LiWuModel.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -440,14 +443,6 @@
 			children = (
 			);
 			path = "首页";
-			sourceTree = "<group>";
-		};
-		E4C1E9071BFFF36A00456BA2 /* Resource */ = {
-			isa = PBXGroup;
-			children = (
-				E4C1E9081BFFF36A00456BA2 /* PrefixHeader.pch */,
-			);
-			path = Resource;
 			sourceTree = "<group>";
 		};
 		E4C1E9091BFFF36A00456BA2 /* Util */ = {
@@ -616,22 +611,8 @@
 		E4C1E9381BFFF36A00456BA2 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E4C1E9391BFFF36A00456BA2 /* LWSContentViewController.h */,
-				E4C1E93A1BFFF36A00456BA2 /* LWSContentViewController.m */,
 				E4C1E93B1BFFF36A00456BA2 /* LWSMenuViewController.h */,
 				E4C1E93C1BFFF36A00456BA2 /* LWSMenuViewController.m */,
-				E4C1E93D1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.h */,
-				E4C1E93E1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.m */,
-				E4C1E93F1BFFF36A00456BA2 /* ReMenDetailViewController.h */,
-				E4C1E9401BFFF36A00456BA2 /* ReMenDetailViewController.m */,
-				E4C1E9411BFFF36A00456BA2 /* ReMenViewController.h */,
-				E4C1E9421BFFF36A00456BA2 /* ReMenViewController.m */,
-				E4C1E9431BFFF36A00456BA2 /* ShouYeDetailViewController.h */,
-				E4C1E9441BFFF36A00456BA2 /* ShouYeDetailViewController.m */,
-				E4C1E9451BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.h */,
-				E4C1E9461BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.m */,
-				E4C1E9471BFFF36A00456BA2 /* ShouYeTableViewController.h */,
-				E4C1E9481BFFF36A00456BA2 /* ShouYeTableViewController.m */,
 				E4C1E9491BFFF36A00456BA2 /* WelcomeViewController.h */,
 				E4C1E94A1BFFF36A00456BA2 /* WelcomeViewController.m */,
 				E4C1E94B1BFFF36A00456BA2 /* 分类 */,
@@ -755,6 +736,12 @@
 		E4C1E9831BFFF36A00456BA2 /* 热门 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E93D1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.h */,
+				E4C1E93E1BFFF36A00456BA2 /* ReMenDetaiHTMLViewController.m */,
+				E4C1E93F1BFFF36A00456BA2 /* ReMenDetailViewController.h */,
+				E4C1E9401BFFF36A00456BA2 /* ReMenDetailViewController.m */,
+				E4C1E9411BFFF36A00456BA2 /* ReMenViewController.h */,
+				E4C1E9421BFFF36A00456BA2 /* ReMenViewController.m */,
 			);
 			path = "热门";
 			sourceTree = "<group>";
@@ -762,6 +749,14 @@
 		E4C1E9841BFFF36A00456BA2 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E9391BFFF36A00456BA2 /* LWSContentViewController.h */,
+				E4C1E93A1BFFF36A00456BA2 /* LWSContentViewController.m */,
+				E4C1E9471BFFF36A00456BA2 /* ShouYeTableViewController.h */,
+				E4C1E9481BFFF36A00456BA2 /* ShouYeTableViewController.m */,
+				E4C1E9431BFFF36A00456BA2 /* ShouYeDetailViewController.h */,
+				E4C1E9441BFFF36A00456BA2 /* ShouYeDetailViewController.m */,
+				E4C1E9451BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.h */,
+				E4C1E9461BFFF36A00456BA2 /* ShouYeDetalHtmlViewController.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";
@@ -785,6 +780,8 @@
 		E4C1E98C1BFFF36A00456BA2 /* 分类 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E9971BFFF36A00456BA2 /* ListDetailViewModel.h */,
+				E4C1E9981BFFF36A00456BA2 /* ListDetailViewModel.m */,
 				E4C1E98D1BFFF36A00456BA2 /* CategoryDetailViewModel.h */,
 				E4C1E98E1BFFF36A00456BA2 /* CategoryDetailViewModel.m */,
 				E4C1E98F1BFFF36A00456BA2 /* GLCHViewModel.h */,
@@ -795,8 +792,6 @@
 				E4C1E9941BFFF36A00456BA2 /* GLFGViewModel.m */,
 				E4C1E9951BFFF36A00456BA2 /* GLViewModel.h */,
 				E4C1E9961BFFF36A00456BA2 /* GLViewModel.m */,
-				E4C1E9971BFFF36A00456BA2 /* ListDetailViewModel.h */,
-				E4C1E9981BFFF36A00456BA2 /* ListDetailViewModel.m */,
 			);
 			path = "分类";
 			sourceTree = "<group>";
@@ -1018,6 +1013,7 @@
 				E4C1E9E01BFFF36B00456BA2 /* ListDetailViewModel.m in Sources */,
 				E4C1E99E1BFFF36B00456BA2 /* ShouYeModel.m in Sources */,
 				E4C1E9A01BFFF36B00456BA2 /* GLModel.m in Sources */,
+				E4C1EA0B1C000E3600456BA2 /* LiWuModel.m in Sources */,
 				E4C1E9D51BFFF36B00456BA2 /* FGDetailViewController.m in Sources */,
 				E4C1E9D41BFFF36B00456BA2 /* FGContrsintViewController.m in Sources */,
 				E4C1E9A51BFFF36B00456BA2 /* CategoryListNetManager.m in Sources */,

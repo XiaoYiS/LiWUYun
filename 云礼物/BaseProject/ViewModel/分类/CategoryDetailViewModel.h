@@ -18,6 +18,6 @@
 - (NSURL *)iconURLForRow:(NSInteger)row;
 - (NSString *)titleForRow:(NSInteger)row;
 - (NSInteger )IDForRow:(NSInteger)row;
-- (NSInteger)likesCountForRow:(NSInteger)row;
+- (NSString *)likesCountForRow:(NSInteger)row;
 - (NSURL *)URLForRow:(NSInteger)row;
 @end

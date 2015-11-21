@@ -31,6 +31,7 @@
         _tableView.dataSource = self;
         //        _tableView.estimatedRowHeight = 90;
         [self.view addSubview:_tableView];
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
         }];
@@ -71,10 +72,11 @@
     ShouYeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     [cell.iconIV.imageView setImageWithURL:[self.dxVM iconURLForRow:indexPath.row] placeholderImage:[UIImage imageNamed:@"gif_introduce"]];
     cell.titleLb.text = [self.dxVM titleForRow:indexPath.row];
+    cell.likesCount.text = [self.dxVM likesCountForRow:indexPath.row];
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 200;
+    return 265;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
