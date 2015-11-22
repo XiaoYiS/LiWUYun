@@ -72,6 +72,11 @@
     [cell.iconIV.imageView setImageWithURL:[self.fgVM iconURLForRow:indexPath.row] placeholderImage:[UIImage imageNamed:@"gif_introduce"]];
     cell.titleLb.text = [self.fgVM titleForRow:indexPath.row];
     cell.likesCount.text = [self.fgVM likesCountForRow:indexPath.row];
+    [cell handleButtonAction:^(NSString *str) {
+        NSLog(@"=== %@",str);
+        cell.likesCount.text = str;
+    }];
+
     return cell;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{

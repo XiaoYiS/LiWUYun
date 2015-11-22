@@ -38,6 +38,24 @@
     }
     return _titleLb;
 }
+
+//按钮点击
+- (void)clock:(UIButton *)sender{
+     NSString *str =nil;
+    if (self.button) {
+        str = [NSString stringWithFormat:@"%ld",self.likesCount.text.integerValue + 1];
+        if (sender.selected == YES) {
+            self.button(self.likesCount.text);
+            return;//如果已经赞就不能赞了
+        }
+        self.button(str);
+        sender.selected = YES;
+    }
+}
+//blck实现
+- (void)handleButtonAction:(blockButton)block{
+    self.button = block;
+}
 - (UILabel *)likesCount {
     if(_likesCount == nil) {
         _likesCount = [[UILabel alloc] init];
@@ -45,9 +63,15 @@
         _likesCount.textAlignment = NSTextAlignmentRight;
         _likesCount.textColor = [UIColor lightGrayColor];
         [self.contentView addSubview:_likesCount];
-        UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"count"]];
-        [self.contentView addSubview:imageView];
-        [imageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        
+        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [button setBackgroundImage:[UIImage imageNamed:@"content-details_like"] forState:(UIControlStateNormal)];
+//        [button setBackgroundImage:[UIImage imageNamed:@"content-details_like_selected"] forState:(UIControlStateSelected)];
+        [button addTarget:self action:@selector(clock:) forControlEvents:(UIControlEventTouchUpInside)];
+     
+        [self.contentView addSubview:button];
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
             make.size.mas_equalTo(CGSizeMake(20, 20));
             make.right.mas_equalTo(self.likesCount.mas_left).mas_equalTo(-2);
             make.bottomMargin.mas_equalTo(self.likesCount.mas_bottomMargin).mas_equalTo(0);

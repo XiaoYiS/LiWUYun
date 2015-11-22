@@ -64,10 +64,15 @@
     ShouYeCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"forIndexPath:indexPath];
     
     // Configure the cell...
+  
     
     [cell.iconIV.imageView setImageWithURL:[self.shouYeVM coverImgForRow:indexPath.row] placeholderImage:[UIImage imageNamed:@"gif_introduce"]];
     cell.titleLb.text = [self.shouYeVM titlegForRow:indexPath.row];
     cell.likesCount.text = [self.shouYeVM likesCountForRow:indexPath.row];
+    [cell handleButtonAction:^(NSString *str) {
+        NSLog(@"=== %@",str);
+        cell.likesCount.text = str;
+    }];
     return cell;
 }
 kRemoveCellSeparator
