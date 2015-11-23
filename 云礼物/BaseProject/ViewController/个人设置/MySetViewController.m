@@ -34,6 +34,7 @@
         imageView.frame = CGRectMake(0, 0, kWindowW, 240);
 //        imageView.backgroundColor= [UIColor redColor];
         imageView.image = [UIImage imageNamed:@"back"];
+        imageView.userInteractionEnabled = YES;
         _tableView.tableHeaderView = imageView;
         
         //登陆按钮
