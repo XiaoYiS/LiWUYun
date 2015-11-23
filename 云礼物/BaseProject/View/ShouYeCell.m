@@ -66,7 +66,7 @@
         
         
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        [button setBackgroundImage:[UIImage imageNamed:@"content-details_like"] forState:(UIControlStateNormal)];
+        [button setBackgroundImage:[UIImage imageNamed:@"count"] forState:(UIControlStateNormal)];
 //        [button setBackgroundImage:[UIImage imageNamed:@"content-details_like_selected"] forState:(UIControlStateSelected)];
         [button addTarget:self action:@selector(clock:) forControlEvents:(UIControlEventTouchUpInside)];
      

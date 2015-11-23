@@ -137,10 +137,10 @@
 		E4C1E8F31BFFF36A00456BA2 /* ListDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListDetailModel.m; sourceTree = "<group>"; };
 		E4C1E8F71BFFF36A00456BA2 /* BaseNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNetManager.h; sourceTree = "<group>"; };
 		E4C1E8F81BFFF36A00456BA2 /* BaseNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNetManager.m; sourceTree = "<group>"; };
-		E4C1E8F91BFFF36A00456BA2 /* ItemsNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemsNetManager.h; sourceTree = "<group>"; };
-		E4C1E8FA1BFFF36A00456BA2 /* ItemsNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemsNetManager.m; sourceTree = "<group>"; };
-		E4C1E8FB1BFFF36A00456BA2 /* ShouYeNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShouYeNetManager.h; sourceTree = "<group>"; };
-		E4C1E8FC1BFFF36A00456BA2 /* ShouYeNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShouYeNetManager.m; sourceTree = "<group>"; };
+		E4C1E8F91BFFF36A00456BA2 /* ItemsNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ItemsNetManager.h; path = ../ItemsNetManager.h; sourceTree = "<group>"; };
+		E4C1E8FA1BFFF36A00456BA2 /* ItemsNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ItemsNetManager.m; path = ../ItemsNetManager.m; sourceTree = "<group>"; };
+		E4C1E8FB1BFFF36A00456BA2 /* ShouYeNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShouYeNetManager.h; path = ../ShouYeNetManager.h; sourceTree = "<group>"; };
+		E4C1E8FC1BFFF36A00456BA2 /* ShouYeNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShouYeNetManager.m; path = ../ShouYeNetManager.m; sourceTree = "<group>"; };
 		E4C1E8FE1BFFF36A00456BA2 /* CategoryListNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryListNetManager.h; sourceTree = "<group>"; };
 		E4C1E8FF1BFFF36A00456BA2 /* CategoryListNetManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryListNetManager.m; sourceTree = "<group>"; };
 		E4C1E9001BFFF36A00456BA2 /* GLNetManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLNetManager.h; sourceTree = "<group>"; };
@@ -427,10 +427,6 @@
 			children = (
 				E4C1E8F71BFFF36A00456BA2 /* BaseNetManager.h */,
 				E4C1E8F81BFFF36A00456BA2 /* BaseNetManager.m */,
-				E4C1E8F91BFFF36A00456BA2 /* ItemsNetManager.h */,
-				E4C1E8FA1BFFF36A00456BA2 /* ItemsNetManager.m */,
-				E4C1E8FB1BFFF36A00456BA2 /* ShouYeNetManager.h */,
-				E4C1E8FC1BFFF36A00456BA2 /* ShouYeNetManager.m */,
 				E4C1E8FD1BFFF36A00456BA2 /* 分类 */,
 				E4C1E9051BFFF36A00456BA2 /* 热门 */,
 				E4C1E9061BFFF36A00456BA2 /* 首页 */,
@@ -457,6 +453,8 @@
 		E4C1E9051BFFF36A00456BA2 /* 热门 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E8F91BFFF36A00456BA2 /* ItemsNetManager.h */,
+				E4C1E8FA1BFFF36A00456BA2 /* ItemsNetManager.m */,
 			);
 			path = "热门";
 			sourceTree = "<group>";
@@ -464,6 +462,8 @@
 		E4C1E9061BFFF36A00456BA2 /* 首页 */ = {
 			isa = PBXGroup;
 			children = (
+				E4C1E8FB1BFFF36A00456BA2 /* ShouYeNetManager.h */,
+				E4C1E8FC1BFFF36A00456BA2 /* ShouYeNetManager.m */,
 			);
 			path = "首页";
 			sourceTree = "<group>";

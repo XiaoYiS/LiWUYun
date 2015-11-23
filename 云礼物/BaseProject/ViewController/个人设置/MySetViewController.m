@@ -30,16 +30,40 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [UIView new];
-        _tableView.tableHeaderView = [UIView new];
+        UIImageView *imageView = [UIImageView new];
+        imageView.frame = CGRectMake(0, 0, kWindowW, 240);
+//        imageView.backgroundColor= [UIColor redColor];
+        imageView.image = [UIImage imageNamed:@"back"];
+        _tableView.tableHeaderView = imageView;
+        
+        //登陆按钮
+        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+        [button setBackgroundImage:[UIImage imageNamed:@"count"] forState:(UIControlStateNormal)];
+        button.backgroundColor = [UIColor greenSeaColor];
+//        [button addTarget:self action:@selector(clickBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+        [imageView addSubview:button];
+        [button mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.center.mas_equalTo(imageView);
+        }];
+        
+        [button bk_addEventHandler:^(UIButton *sender) {
+            //实现第三方qq登陆功能
+            NSLog(@"===qq登陆");
+        } forControlEvents:(UIControlEventTouchUpInside)];
+        
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_tableView];
         [_tableView mas_makeConstraints:^(MASConstraintMaker *make) {
             make.edges.mas_equalTo(0);
         }];
-//        [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
+
         
     }
     return _tableView;
+}
+
+- (void)clickBtn:(UIButton *)sender{
+    NSLog(@"===qq登陆");
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -51,33 +75,77 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 3;
+    return 6;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
     if (cell == nil) {
         cell = [[UITableViewCell alloc]initWithStyle:(UITableViewCellStyleValue1) reuseIdentifier:@"Cell"];
     }
-    
+    //设置里面加入版本检测更新
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     if (indexPath.row == 0) {
         cell.textLabel.text = @"我的订单";
-        cell.detailTextLabel.text = @"1";
+        cell.detailTextLabel.text = @"暂无";
+        cell.detailTextLabel.font = [UIFont systemFontOfSize:15];
         cell.detailTextLabel.textColor = [UIColor redColor];
     }
     if (indexPath.row == 1) {
-        cell.textLabel.text = @"我的积分";
+        cell.textLabel.text = @"我的收藏";
     }
     if (indexPath.row == 2) {
-        cell.textLabel.text = @"我的礼券";
+        cell.textLabel.text = @"我的分享";
+    }
+    if (indexPath.row == 3) {
+        cell.textLabel.text = @"喜欢的礼物";
+    }
+    if (indexPath.row == 4) {
+        cell.textLabel.text = @"喜欢的攻略";
+    }
+    if (indexPath.row == 5) {
+        cell.textLabel.text = @"检测最新版本 ";
     }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.row == 5) {
+        //AlertView
+        //得到当前版本，判断当前版本是否和安装的版本一样，
+        //alertview提示是否更新
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"检测新版本" message:@"当前已经是最新的版本了" delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
+        [alertView show];
+
+//
+//        NSDictionary  *infoDict = [[NSBundle mainBundle]infoDictionary];
+//        
+//        //    NSLog(@"infoDict:%@",infoDict);
+//        NSString *key = @"CFBundleShortVersionString";
+//        
+//        NSString *currentVersion = infoDict[key];
+//        NSString *runVersion = [[NSUserDefaults standardUserDefaults] stringForKey:key];
+//        if ( ![runVersion isEqualToString:currentVersion]) {
+//            NSLog(@"更新");
+//            [[NSUserDefaults standardUserDefaults] setValue:currentVersion forKey:key];
+//        }else{
+//            NSLog(@"显示已经是最新版本");
+//            
+//            UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"检测新版本" message:@"当前已经是最新的版本了" delegate:self cancelButtonTitle:@"返回" otherButtonTitles:@"确认", nil];
+//            [alertView show];
+//        }
+
+    }
 }
+
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewAutomaticDimension;
+}
+//kRemoveCellSeparator
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    cell.separatorInset = UIEdgeInsetsZero;
+    cell.layoutMargins = UIEdgeInsetsZero;
+    cell.preservesSuperviewLayoutMargins = NO;
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -87,7 +87,7 @@
 
 - (RESideMenu *)sideMenu{
     if (!_sideMenu) {
-        _sideMenu=[[RESideMenu alloc]initWithContentViewController:[CategoriesViewController standardCategoryContent] leftMenuViewController:[LWSMenuViewController new] rightMenuViewController:nil];
+        _sideMenu=[[RESideMenu alloc]initWithContentViewController:[LWSContentViewController standardLWSContentNavigation] leftMenuViewController:[LWSMenuViewController new] rightMenuViewController:nil];
         //为sideMenu设置背景图,图片插件KSImageName，到Github下载
         _sideMenu.backgroundImage =[UIImage imageNamed:@"p_bg"];
         //可以让出现菜单时不显示状态栏
