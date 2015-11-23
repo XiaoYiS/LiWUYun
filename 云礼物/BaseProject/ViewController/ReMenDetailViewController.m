@@ -41,6 +41,7 @@
         make.edges.mas_equalTo(0);
     }];
     [FactoryAdd addBackItemToVC:self];
+    self.title = @"详情";
 }
 
 #pragma mark - UIWebViewDelegate

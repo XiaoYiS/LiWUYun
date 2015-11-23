@@ -12,6 +12,7 @@
 #import "LWSContentViewController.h"
 #import "ReMenViewController.h"
 #import "CategoriesViewController.h"
+#import "MySetViewController.h"
 @interface LWSMenuViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (strong,nonatomic) UITableView *tableView;
 @property (strong,nonatomic) NSArray *items;
@@ -79,6 +80,9 @@ kRemoveCellSeparator
             [self.sideMenuViewController setContentViewController:[CategoriesViewController standardCategoryContent] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
             break;
+        case 3:
+            [self.sideMenuViewController setContentViewController:[MySetViewController standardMySetContentNavigation]animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
         default:
             break;
     }

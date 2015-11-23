@@ -12,7 +12,7 @@
 #import "WelcomeViewController.h"
 #import "LWSMenuViewController.h"
 #import "LWSContentViewController.h"
-
+#import "CategoriesViewController.h"
 
 
 @interface AppDelegate ()
@@ -30,7 +30,7 @@
     //需要在target中info-Bundle identifier--添加最后一个属性来实现
 //    application.statusBarStyle = UIStatusBarStyleLightContent;
     
-    [NSThread sleepForTimeInterval:2.0];//设置启动页面时间
+    [NSThread sleepForTimeInterval:1.0];//设置启动页面时间
     
 //    self.window.rootViewController = self.sideMenu;
     [self setStart];
@@ -87,7 +87,7 @@
 
 - (RESideMenu *)sideMenu{
     if (!_sideMenu) {
-        _sideMenu=[[RESideMenu alloc]initWithContentViewController:[LWSContentViewController standardLWSContentNavigation] leftMenuViewController:[LWSMenuViewController new] rightMenuViewController:nil];
+        _sideMenu=[[RESideMenu alloc]initWithContentViewController:[CategoriesViewController standardCategoryContent] leftMenuViewController:[LWSMenuViewController new] rightMenuViewController:nil];
         //为sideMenu设置背景图,图片插件KSImageName，到Github下载
         _sideMenu.backgroundImage =[UIImage imageNamed:@"p_bg"];
         //可以让出现菜单时不显示状态栏
