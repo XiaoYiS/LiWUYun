@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "login_qq.png",
+      "filename" : "p_bg.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "p_bg@2x.png",
       "scale" : "2x"
     },
     {
