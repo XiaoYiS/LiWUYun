@@ -12,9 +12,9 @@
 #import "WelcomeViewController.h"
 #import "LWSMenuViewController.h"
 #import "LWSContentViewController.h"
-#import "CategoriesViewController.h"
 
-
+#import "UMSocial.h"
+#import "UMSocialQQHandler.h"
 
 @interface AppDelegate ()
 
@@ -22,10 +22,24 @@
 
 @implementation AppDelegate
 
+//系统回调
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation
+{
+    return  [UMSocialSnsService handleOpenURL:url];
+}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self initializeWithApplication:application];
 
+    //第三方登陆
+    [UMSocialQQHandler setQQWithAppId:@"1104539912" appKey:@"eFVgRits2fqf36JF" url:@"http://www.umeng.com/social"];
     
     
     //需要在target中info-Bundle identifier--添加最后一个属性来实现

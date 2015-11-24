@@ -7,6 +7,7 @@
 //
 
 #import "MySetViewController.h"
+#import "UMSocial.h"
 
 @interface MySetViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -39,8 +40,9 @@
         
         //登陆按钮
         UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-        [button setBackgroundImage:[UIImage imageNamed:@"count"] forState:(UIControlStateNormal)];
-        button.backgroundColor = [UIColor greenSeaColor];
+//        [button setTitle:@"未登录" forState:(UIControlStateNormal)];
+        [button setBackgroundImage:[UIImage imageNamed:@"qqicon"] forState:(UIControlStateNormal)];
+//        button.backgroundColor = [UIColor greenSeaColor];
 //        [button addTarget:self action:@selector(clickBtn:) forControlEvents:(UIControlEventTouchUpInside)];
         [imageView addSubview:button];
         [button mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,7 +51,20 @@
         
         [button bk_addEventHandler:^(UIButton *sender) {
             //实现第三方qq登陆功能
-            NSLog(@"===qq登陆");
+            
+            UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
+            
+            snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
+                
+                //          获取微博用户名、uid、token等
+                
+                if (response.responseCode == UMSResponseCodeSuccess) {
+                    
+                    UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToQQ];
+                    
+                    NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
+                    
+                }});
         } forControlEvents:(UIControlEventTouchUpInside)];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -63,9 +78,7 @@
     return _tableView;
 }
 
-- (void)clickBtn:(UIButton *)sender{
-    NSLog(@"===qq登陆");
-}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
