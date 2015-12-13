@@ -93,15 +93,10 @@
     NSMutableArray *resoultArray = [NSMutableArray array];
     for (ListDataCollectionsModel *model in self.listVM.dataArr) {
         NSRange range = [model.title rangeOfString:searchText];
-        
         if (range.length > 0) {
             [resoultArray addObject:model];
-            
         }
-        
-
     }
-   
         self.showResoultVC.resoultArray= resoultArray;
     //跟新视图县hi内容
     [self.showResoultVC.tableView reloadData];

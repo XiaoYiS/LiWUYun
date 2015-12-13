@@ -22,6 +22,7 @@
         vc = [[PLContraintViewController alloc]initWithViewControllerClasses:[self viewControllerClasses] andTheirTitles:[self itemNames]];
         vc.keys = [self vcKeys];
         vc.values = [self vcValues];
+        vc.titleColorSelected = kRGBColor(255, 100, 100);
     });
     return vc;
 }

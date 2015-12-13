@@ -90,7 +90,6 @@
     [self initTabBar];
 }
 
-
 //定义4个控制器
 - (void)initTabBar{
     ZTViewController *zVC = [[ZTViewController alloc]init];

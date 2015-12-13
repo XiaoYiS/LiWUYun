@@ -3,7 +3,7 @@
 //  LiWuShuo
 //
 //  Created by apple-jd12 on 15/11/3.
-//  Copyright © 2015年 Tarena. All rights reserved.
+//  Copyright © 2015年 Hazel. All rights reserved.
 //
 
 #import "ReMenModel.h"

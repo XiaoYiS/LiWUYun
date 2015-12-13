@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  BaseProject
 //
-//  Created by jiyingxin on 15/10/21.
-//  Copyright © 2015年 Tarena. All rights reserved.
+//  Created by yihaiyang on 15/10/21.
+//  Copyright © 2015年 Hazel. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

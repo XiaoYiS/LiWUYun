@@ -38,6 +38,7 @@ static AFHTTPSessionManager *manager = nil;
         [self handleError:error];
         complete(nil, error);
     }];
+    
 }
 
 + (NSString *)percentPathWithPath:(NSString *)path params:(NSDictionary *)params{

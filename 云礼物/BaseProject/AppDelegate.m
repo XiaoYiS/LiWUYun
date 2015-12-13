@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  BaseProject
 //
-//  Created by jiyingxin on 15/10/21.
-//  Copyright © 2015年 Tarena. All rights reserved.
+//  Created by yihaiyang on 15/10/21.
+//  Copyright © 2015年 Hazel. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -15,6 +15,8 @@
 
 #import "UMSocial.h"
 #import "UMSocialQQHandler.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialSinaHandler.h"
 
 @interface AppDelegate ()
 
@@ -22,23 +24,29 @@
 
 @implementation AppDelegate
 
-//系统回调
-- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-{
-    return  [UMSocialSnsService handleOpenURL:url];
-}
-- (BOOL)application:(UIApplication *)application
-            openURL:(NSURL *)url
-  sourceApplication:(NSString *)sourceApplication
-         annotation:(id)annotation
-{
-    return  [UMSocialSnsService handleOpenURL:url];
-}
+////系统回调
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [self initializeWithApplication:application];
 
+    
+//    [UMSocialSinaSSOHandler openNewSinaSSOWithAppKey:@"1571415449" RedirectURL:@"http://sns.whalecloud.com/sina2/callback"];
     //第三方登陆
+    [UMSocialData setAppKey:@"5632e64367e58e0a6e004d07"];
+    [UMSocialSinaHandler openSSOWithRedirectURL:nil];
+    [UMSocialWechatHandler setWXAppId:@"wx945b58aef3a271f0" appSecret:@"0ae78dd42761fd9681b04833c79a857b" url:@"http://www.umeng.com/social"];
+
     [UMSocialQQHandler setQQWithAppId:@"1104539912" appKey:@"eFVgRits2fqf36JF" url:@"http://www.umeng.com/social"];
     
     

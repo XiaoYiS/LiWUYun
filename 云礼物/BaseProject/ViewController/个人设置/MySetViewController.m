@@ -8,14 +8,23 @@
 
 #import "MySetViewController.h"
 #import "UMSocial.h"
-
+#import "UMSocialSinaHandler.h"
+#import "UMSocialSinaSSOHandler.h"
+#import "LoginViewController.h"
 @interface MySetViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+@property (strong,nonatomic) NSUserDefaults *userDefault ;
 @property (strong,nonatomic)UITableView *tableView;
 
 @end
 
 @implementation MySetViewController
+
+- (NSUserDefaults *)userDefault{
+    if (!_userDefault) {
+        _userDefault = [NSUserDefaults standardUserDefaults];
+    }
+    return _userDefault;
+}
 + (UINavigationController *)standardMySetContentNavigation{
     static UINavigationController *nav = nil;
     static dispatch_once_t onceToken;
@@ -25,47 +34,67 @@
     });
     return nav;
 }
+
+- (UIView *)setImageView{
+//    UIImageView *imageView = [UIImageView new];
+//    imageView.frame = CGRectMake(0, 0, kWindowW, 240);
+//    //        imageView.backgroundColor= [UIColor redColor];
+//    imageView.image = [UIImage imageNamed:@"back"];
+//    imageView.userInteractionEnabled = YES;
+    
+    UIView *view = [UIView new];
+    view.frame = CGRectMake(0, 0, kWindowW, 240);
+    view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"back"]];
+    
+    //登陆按钮
+    UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
+    //        [button setTitle:@"未登录" forState:(UIControlStateNormal)];
+    
+    button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    button.layer.cornerRadius = 45;
+    //判断是否登陆
+    NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+    path = [path stringByAppendingPathComponent:@"archivingFile"];
+    
+    if ([self.userDefault stringForKey:@"userName"]) {
+//        [button setBackgroundImageForState:(UIControlStateNormal) withURL:[NSURL URLWithString:[self.userDefault stringForKey:@"iconURL"]] placeholderImage:[UIImage imageNamed:@"qqicon5"]];
+//        button.backgroundColor = [UIColor greenSeaColor];
+        [button setImageForState:(UIControlStateNormal) withURL:[NSURL URLWithString:[self.userDefault stringForKey:@"iconURL"]] placeholderImage:[UIImage imageNamed:@"qqicon5"]];
+        self.title = [self.userDefault stringForKey:@"userName"];
+    } else if (![self.userDefault stringForKey:@"userName"]){
+        button.backgroundColor = [UIColor whiteColor];
+//        [button setBackgroundImage:[UIImage imageNamed:@"qqicon"] forState:(UIControlStateNormal)];
+        [button setImage:[UIImage imageNamed:@"qqicon"] forState:(UIControlStateNormal)];
+        
+    }
+    //        button.backgroundColor = [UIColor greenSeaColor];
+    //        [button addTarget:self action:@selector(clickBtn:) forControlEvents:(UIControlEventTouchUpInside)];
+    [view addSubview:button];
+    [button mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.mas_equalTo(view);
+        make.size.mas_equalTo(CGSizeMake(90, 90));
+    }];
+    
+    [button bk_addEventHandler:^(UIButton *sender) {
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"LoginViewController" bundle:nil];
+        //弹出登陆界面
+        if ([self.userDefault stringForKey:@"userName"]) {
+            return ;
+        }else {
+            LoginViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        }
+    } forControlEvents:(UIControlEventTouchUpInside)];
+    return view;
+}
 - (UITableView *)tableView{
     if (!_tableView) {
         _tableView = [[UITableView alloc]initWithFrame:CGRectZero style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.tableFooterView = [UIView new];
-        UIImageView *imageView = [UIImageView new];
-        imageView.frame = CGRectMake(0, 0, kWindowW, 240);
-//        imageView.backgroundColor= [UIColor redColor];
-        imageView.image = [UIImage imageNamed:@"back"];
-        imageView.userInteractionEnabled = YES;
-        _tableView.tableHeaderView = imageView;
-        
-        //登陆按钮
-        UIButton *button = [UIButton buttonWithType:(UIButtonTypeCustom)];
-//        [button setTitle:@"未登录" forState:(UIControlStateNormal)];
-        [button setBackgroundImage:[UIImage imageNamed:@"qqicon"] forState:(UIControlStateNormal)];
-//        button.backgroundColor = [UIColor greenSeaColor];
-//        [button addTarget:self action:@selector(clickBtn:) forControlEvents:(UIControlEventTouchUpInside)];
-        [imageView addSubview:button];
-        [button mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.center.mas_equalTo(imageView);
-        }];
-        
-        [button bk_addEventHandler:^(UIButton *sender) {
-            //实现第三方qq登陆功能
-            
-            UMSocialSnsPlatform *snsPlatform = [UMSocialSnsPlatformManager getSocialPlatformWithName:UMShareToQQ];
-            
-            snsPlatform.loginClickHandler(self,[UMSocialControllerService defaultControllerService],YES,^(UMSocialResponseEntity *response){
-                
-                //          获取微博用户名、uid、token等
-                
-                if (response.responseCode == UMSResponseCodeSuccess) {
-                    
-                    UMSocialAccountEntity *snsAccount = [[UMSocialAccountManager socialAccountDictionary] valueForKey:UMShareToQQ];
-                    
-                    NSLog(@"username is %@, uid is %@, token is %@ url is %@",snsAccount.userName,snsAccount.usid,snsAccount.accessToken,snsAccount.iconURL);
-                    
-                }});
-        } forControlEvents:(UIControlEventTouchUpInside)];
+        //设置头
+//        _tableView.tableHeaderView = [self setImageView];
         
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         [self.view addSubview:_tableView];
@@ -82,14 +111,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.tableView reloadData];
+    self.tableView.hidden = NO;
     self.title = @"个人中心";
     [FactoryAdd addMenuItemToVC:self];
     //加入头部View
 }
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = NO;
+    [self.tableView reloadData];
+    self.tableView.tableHeaderView = [self setImageView];
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 6;
+    return 7;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
@@ -119,6 +154,11 @@
     if (indexPath.row == 5) {
         cell.textLabel.text = @"检测最新版本 ";
     }
+    if (indexPath.row == 6) {
+        cell.textLabel.text = @"退出当前账号";
+        cell.textLabel.textColor = [UIColor redColor];
+        cell.textLabel.textAlignment = NSTextAlignmentCenter;
+    }
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -131,7 +171,6 @@
         UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"检测新版本" message:@"当前已经是最新的版本了" delegate:self cancelButtonTitle:@"确认" otherButtonTitles: nil];
         [alertView show];
 
-//
 //        NSDictionary  *infoDict = [[NSBundle mainBundle]infoDictionary];
 //        
 //        //    NSLog(@"infoDict:%@",infoDict);
@@ -150,6 +189,25 @@
 //        }
 
     }
+    if (indexPath.row == 6) {
+        //退出登陆
+        NSLog(@"退出登陆");
+        //取消微博授权
+        [[UMSocialDataService defaultDataService] requestUnOauthWithType:UMShareToSina  completion:^(UMSocialResponseEntity *response){
+            NSLog(@"response is %@",response);
+        }];
+        NSString *path = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject;
+        path = [path stringByAppendingPathComponent:@"archivingFile"];
+        //如果存在用户数据 则删除
+        if ([self.userDefault stringForKey:@"userName"]) {
+            [self.userDefault removeObjectForKey:@"userName"];
+            [self.userDefault removeObjectForKey:@"iconURL"];
+        }
+//        [self.navigationController popViewControllerAnimated:YES];
+//        [self setImageView];
+        [self.tableView reloadData];
+        self.tableView.tableHeaderView = [self setImageView];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -166,14 +224,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
